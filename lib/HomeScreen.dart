@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:getx_dart/Screen_one.dart';
 
 class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
+
+  const HomeScreen({super.key });
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
@@ -13,7 +15,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title:const  Text('GetX Practice'),
+        title: const  Text('GetX Practice'),
         centerTitle: true,
         backgroundColor: Colors.blue,
       ),
@@ -68,7 +70,14 @@ class _HomeScreenState extends State<HomeScreen> {
                 );
               },
             ),
-          )
+          ),
+            // For Routing from one page to other
+             TextButton(onPressed: (){
+              // Get.to(const ScreenOne(name: 'Huzaifa khan',));
+               Get.toNamed('/ScreenOne',arguments: [
+                 'Huzaifa khan'
+               ]);
+             }, child:const  Text('Go to Next Screen',style: TextStyle(color: Colors.blue),))
         ],
       ),
       floatingActionButton: FloatingActionButton(onPressed:(){
