@@ -35,7 +35,7 @@ class _HomeScreenState extends State<HomeScreen> {
                  },
                ),
              ),
-          Card(
+             Card(
             child: ListTile(
               title:const  Text('Getx Bottom Sheet'),
               subtitle:const  Text('Practicing Bottom sheet'),
@@ -56,8 +56,8 @@ class _HomeScreenState extends State<HomeScreen> {
                               },
                             ),
                             ListTile(
-                              leading: Icon(Icons.dark_mode),
-                              title: Text('Light Mode'),
+                              leading:const  Icon(Icons.dark_mode),
+                              title:const  Text('Light Mode'),
                               onTap: (){
                                 Get.changeTheme(ThemeData.dark());
                               },
