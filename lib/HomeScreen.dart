@@ -77,7 +77,15 @@ class _HomeScreenState extends State<HomeScreen> {
                Get.toNamed('/ScreenOne',arguments: [
                  'Huzaifa khan'
                ]);
-             }, child:const  Text('Go to Next Screen',style: TextStyle(color: Colors.blue),))
+             }, child:const  Text('Go to Next Screen',style: TextStyle(color: Colors.blue),)),
+           // For height and Width of the Getx
+          SizedBox(height: Get.height * .1,),
+          Container(
+            height: Get.height * .2,
+            width: Get.width * .2,
+            color: Colors.blue,
+            child:const  Center(child: Text('Container'),),
+          )
         ],
       ),
       floatingActionButton: FloatingActionButton(onPressed:(){
