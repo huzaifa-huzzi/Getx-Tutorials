@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:getx_dart/Screen_one.dart';
 
 class HomeScreen extends StatefulWidget {
 
@@ -79,13 +78,31 @@ class _HomeScreenState extends State<HomeScreen> {
                ]);
              }, child:const  Text('Go to Next Screen',style: TextStyle(color: Colors.blue),)),
            // For height and Width of the Getx
-          SizedBox(height: Get.height * .1,),
           Container(
-            height: Get.height * .2,
+            height: Get.height * .1,
             width: Get.width * .2,
             color: Colors.blue,
             child:const  Center(child: Text('Container'),),
+          ),
+          Column(
+            children: [
+              ListTile(
+                title: Text('message'.tr),
+                subtitle:  Text('name'.tr),
+              ),
+              Row(
+                children: [
+                  OutlinedButton(onPressed: (){
+                    Get.updateLocale(const Locale('en_US'));
+                  }, child:const  Text('English')),
+                  OutlinedButton(onPressed: (){
+                    Get.updateLocale(const Locale('ur_PK'));
+                  }, child:const  Text('Urdu')),
+                ],
+              )
+            ],
           )
+
         ],
       ),
       floatingActionButton: FloatingActionButton(onPressed:(){
