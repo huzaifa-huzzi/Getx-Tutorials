@@ -24,14 +24,16 @@ class _SliderExampleState extends State<SliderExample> {
       ),
       body: Column(
         children: [
-          Container(
+          Obx(() =>Container(
             height: 400,
             width: 400,
             color: Colors.red.withOpacity(controller.slider.value),
-          ),
-          Slider(value: controller.slider.value, onChanged: (value){
+          ), ),
+          Obx(() => Slider(value: controller.slider.value, onChanged: (value){
             controller.setOpacity(value);
-          })
+          }) ),
+
+
         ],
       ),
     );
