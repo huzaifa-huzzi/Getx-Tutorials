@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_navigation/get_navigation.dart';
+import 'package:getx_dart/Counter.dart';
 import 'package:getx_dart/HomeScreen.dart';
 import 'package:getx_dart/Languages.dart';
 import 'package:getx_dart/Screen_one.dart';
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
       translations: Languages(),
       fallbackLocale:const  Locale('en_US'),
       locale:const  Locale('en_US'),
-      home:const  HomeScreen(),
+      home:const  Counter(),
       getPages: [
         GetPage(name: '/', page: () =>const  HomeScreen()),
         GetPage(name: '/ScreenOne', page: () =>  ScreenOne())
