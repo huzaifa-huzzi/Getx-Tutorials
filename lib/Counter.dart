@@ -22,7 +22,7 @@ class _CounterState extends State<Counter> {
         centerTitle: true,
       ),
       body: Center(
-        child: Text(controller.counter.toString(),style:const  TextStyle(fontSize: 20),),
+        child:Obx(() =>  Text(controller.counter.toString(),style:const  TextStyle(fontSize: 20),),)
       ),
       floatingActionButton: FloatingActionButton(onPressed:(){
         controller.incrementCounter();
