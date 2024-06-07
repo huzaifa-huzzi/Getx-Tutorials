@@ -24,6 +24,7 @@ class _NotificationExampleState extends State<NotificationExample> {
       body: Column(
         children: [
           Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
              const  Text('Notification'),
               Obx(() => Switch(value:controller.notification.value , onChanged: (value){
