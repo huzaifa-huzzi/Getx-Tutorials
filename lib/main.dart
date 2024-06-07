@@ -3,8 +3,8 @@ import 'package:get/get.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 import 'package:getx_dart/HomeScreen.dart';
 import 'package:getx_dart/Languages.dart';
+import 'package:getx_dart/Notification_example.dart';
 import 'package:getx_dart/Screen_one.dart';
-import 'package:getx_dart/Slider_Example.dart';
 
 void main() {
   runApp(const MyApp());
@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
       translations: Languages(),
       fallbackLocale:const  Locale('en_US'),
       locale:const  Locale('en_US'),
-      home:const SliderExample() ,
+      home:const NotificationExample() ,
       getPages: [
         GetPage(name: '/', page: () =>const  HomeScreen()),
         GetPage(name: '/ScreenOne', page: () =>  ScreenOne())
