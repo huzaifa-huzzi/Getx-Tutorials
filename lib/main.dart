@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_navigation/get_navigation.dart';
+import 'package:getx_dart/Favourite.dart';
 import 'package:getx_dart/HomeScreen.dart';
 import 'package:getx_dart/Languages.dart';
-import 'package:getx_dart/Notification_example.dart';
 import 'package:getx_dart/Screen_one.dart';
 
 void main() {
@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
       translations: Languages(),
       fallbackLocale:const  Locale('en_US'),
       locale:const  Locale('en_US'),
-      home:const NotificationExample() ,
+      home:const Favourite() ,
       getPages: [
         GetPage(name: '/', page: () =>const  HomeScreen()),
         GetPage(name: '/ScreenOne', page: () =>  ScreenOne())
